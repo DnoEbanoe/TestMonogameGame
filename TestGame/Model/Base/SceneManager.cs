@@ -16,7 +16,8 @@ namespace TestGame.Model.Base
         public SpriteBatch SpriteBatch { get; set; }
         public GraphicsDeviceManager GraphicsDeviceManager { get; set; }
         public KeyboardState KeyboardState { get; set; }
-        public List<GameObject2D> Elements { get; set; }
+        public MouseState MouseState { get; set; }
+        public List<GameObject2D> Elements { get; set; } = new List<GameObject2D>();
 
     }
 }

@@ -22,3 +22,30 @@ c:\users\user\documents\visual studio 2017\Projects\TestGame\TestGame\obj\x86\De
 c:\users\user\documents\visual studio 2017\Projects\TestGame\TestGame\obj\x86\Debug\TestGame.exe
 c:\users\user\documents\visual studio 2017\Projects\TestGame\TestGame\obj\x86\Debug\TestGame.pdb
 c:\users\user\documents\visual studio 2017\Projects\TestGame\TestGame\bin\Windows\x86\Debug\Content\ball32.xnb
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\obj\x86\Debug\TestGame.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\obj\x86\Debug\TestGame.exe
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\obj\x86\Debug\TestGame.pdb
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\Content\ball32.xnb
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\TestGame.exe
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\TestGame.pdb
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\Content\tank18_31.xnb
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\Content\bullet9_23.xnb
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\Content\obstacle32_5.xnb

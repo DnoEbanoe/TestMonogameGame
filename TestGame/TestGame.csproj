@@ -45,7 +45,11 @@
     <Compile Include="Model\Base\SceneManager.cs" />
     <Compile Include="Model\Base\GameObject2D.cs" />
     <Compile Include="Model\Enums\Side.cs" />
+    <Compile Include="Model\GameElements\Obstacle\Obstacle.cs" />
+    <Compile Include="Model\Helpers\Helper.cs" />
+    <Compile Include="Model\Base\MyPoint.cs" />
     <Compile Include="Model\Player\Player.cs" />
+    <Compile Include="Model\Weapons\Bullet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -4,6 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>c:/users/user/documents/visual studio 2017/Projects/TestGame/TestGame/Content/ball32.png</File>
+    <File>C:/Users/User/Source/Repos/TestMonogameGame/TestGame/Content/ball32.png</File>
+    <File>C:/Users/User/Source/Repos/TestMonogameGame/TestGame/Content/tank18_31.png</File>
+    <File>C:/Users/User/Source/Repos/TestMonogameGame/TestGame/Content/bullet9_23.png</File>
+    <File>C:/Users/User/Source/Repos/TestMonogameGame/TestGame/Content/obstacle32_5.png</File>
   </SourceFiles>
 </SourceFileCollection>

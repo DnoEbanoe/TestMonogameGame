@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TestGame.Model;
 using TestGame.Model.Base;
+using TestGame.Model.GameElements.Obstacle;
 using TestGame.Model.Player;
 
 namespace TestGame
@@ -11,53 +12,61 @@ namespace TestGame
     public class Game1 : Game
     {
         private SceneManager SceneManager { get; set; } = new SceneManager();
-        private GameObject2D _ball { get; set; }
+        private Player Player { get; set; }
         public Game1()
         {
             SceneManager.GraphicsDeviceManager  = new GraphicsDeviceManager(this);
-            //graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
         }
 
         protected override void Initialize()
         {
-            _ball = new Player(){SceneManager = SceneManager, Size = new Vector2(32,32), Tags = new List<string>(new []{"Player"})};
-            
+            Player = new Player(){SceneManager = SceneManager, Size = new MyPoint(18,31), Tags = new List<string>(new []{"Player"})};
+            Player.Show();
+
+
             base.Initialize();
         }
         protected override void LoadContent()
         {
             SceneManager.SpriteBatch =  new SpriteBatch(GraphicsDevice);
-            _ball.Texture =  Content.Load<Texture2D>("ball32");
+            Player.Texture =  Content.Load<Texture2D>("tank18_31");
+            Player.BulletTexture = Content.Load<Texture2D>("bullet9_23");
+            new Obstacle
+            {
+                Texture = Content.Load<Texture2D>("obstacle32_5"),
+                Position = new MyPoint(200, 50),
+                Size = new MyPoint(32, 5),
+                SceneManager = SceneManager,
+                Tags = new List<string>(new[] { "obstacle" })
+            }.Show();
         }
-        protected override void UnloadContent()
-        {
-            // TODO: Unload any non ContentManager content here
-        }
-
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
             SceneManager.UpdateTime = gameTime;
             SceneManager.KeyboardState = Keyboard.GetState();
+            SceneManager.MouseState = Mouse.GetState(Window);
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-           
-            _ball.Update();
+
+            for (var index = 0; index < SceneManager.Elements.Count; index++)
+            {
+                var element = SceneManager.Elements[index];
+                element.Update();
+            }
             base.Update(gameTime);
         }
-
         protected override void Draw(GameTime gameTime)
         {
             SceneManager.DrowTime = gameTime;
             GraphicsDevice.Clear(Color.White);
             SceneManager.SpriteBatch.Begin();
-            
-            _ball.Draw();
+
+            for (var index = 0; index < SceneManager.Elements.Count; index++)
+            {
+                var element = SceneManager.Elements[index];
+                element.Draw();
+            }
 
             SceneManager.SpriteBatch.End();
 

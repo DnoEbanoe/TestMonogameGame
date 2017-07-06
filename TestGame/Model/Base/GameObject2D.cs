@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using TestGame.Model.Helpers;
 
 namespace TestGame.Model.Base
 {
@@ -11,7 +13,7 @@ namespace TestGame.Model.Base
         public SceneManager SceneManager { get; set; }
         public Texture2D Texture { get; set; }
 		public Guid Id { get; set; }
-        public Vector2 Position
+        public MyPoint Position
         {
             get { return _position; }
             set
@@ -21,8 +23,8 @@ namespace TestGame.Model.Base
             }
         }
         public float Rotation { get; set; }
-        public bool IsVisable { get; set; }
-        public Vector2 Size
+        public bool IsVisable { get; set; } = true;
+        public MyPoint Size
         {
             get { return _size; }
             set
@@ -33,15 +35,15 @@ namespace TestGame.Model.Base
         }
         public List<string> Tags { get; set; }
 
-        private Rectangle? _sourseRectange = null;
-        private Vector2 _size;
-        private Vector2 _position;
+        private Rectangle? _sourseRectange = new Rectangle();
+        private MyPoint _size = MyPoint.Zero;
+        private MyPoint _position = MyPoint.Zero;
 
-        public GameObject2D(): this(null, null, Vector2.Zero, 0f)
+        public GameObject2D(): this(null, null, MyPoint.Zero, 0f)
         {
 
         }
-        public GameObject2D(SceneManager sceneManager, Texture2D texture, Vector2 position, float rotation)
+        public GameObject2D(SceneManager sceneManager, Texture2D texture, MyPoint position, float rotation)
         {
             SceneManager = sceneManager;
             Texture = texture;
@@ -52,7 +54,7 @@ namespace TestGame.Model.Base
         {
             if(!IsVisable)
                 return;
-            SceneManager.SpriteBatch.Draw(Texture, Position, _sourseRectange, Color.White, Rotation, Vector2.One, 1f, SpriteEffects.None, 1f);
+            SceneManager.SpriteBatch.Draw(Texture, Position.ToVector2(), _sourseRectange, Color.White, Rotation, Vector2.One, 1f, SpriteEffects.None, 1f);
         }
 
         public virtual void Update()
@@ -78,6 +80,11 @@ namespace TestGame.Model.Base
             }
 
             return false;
+        }
+
+        public void Show()
+        {
+            SceneManager.Elements.Add(this);
         }
         public virtual void Destroy()
         {
