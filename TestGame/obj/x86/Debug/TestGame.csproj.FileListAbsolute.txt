@@ -49,3 +49,7 @@ C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\Sharp
 C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\Content\tank18_31.xnb
 C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\Content\bullet9_23.xnb
 C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\Content\obstacle32_5.xnb
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\TestGame.exe.manifest
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\bin\Windows\x86\Debug\TestGame.application
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\obj\x86\Debug\TestGame.exe.manifest
+C:\Users\User\Source\Repos\TestMonogameGame\TestGame\obj\x86\Debug\TestGame.application

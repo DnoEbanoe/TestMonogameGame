@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using TestGame.Animation;
 using TestGame.Model.Base;
 using TestGame.Model.Enums;
 using TestGame.Model.Helpers;
@@ -17,8 +18,14 @@ namespace TestGame.Model.Player
     {
         public Texture2D BulletTexture { get; set; }
         public List<Bullet> Bullets { get; set; } = new List<Bullet>();
+        public Animator Animator { get; set; }
         public float Spead { get; set; } = 0.1f;
         public float RotationSpeed { get; set; } = 0.0005f;
+
+        public Player()
+        {
+            
+        }
         public override void Update()
         {
             var keyboardState = this.SceneManager.KeyboardState;
@@ -28,11 +35,11 @@ namespace TestGame.Model.Player
             if (keyboardState.IsKeyDown(Keys.S))
                 Run(Side.Down);
             if (keyboardState.IsKeyDown(Keys.A))
-                //Run(Side.Left);
-                Rotation -= RotationSpeed * SceneManager.UpdateTime.ElapsedGameTime.Milliseconds;
+                Run(Side.Left);
+                //Rotation -= RotationSpeed * SceneManager.UpdateTime.ElapsedGameTime.Milliseconds;
             if (keyboardState.IsKeyDown(Keys.D))
-                //Run(Side.Right);
-                Rotation += RotationSpeed * SceneManager.UpdateTime.ElapsedGameTime.Milliseconds;
+                Run(Side.Right);
+                //Rotation += RotationSpeed * SceneManager.UpdateTime.ElapsedGameTime.Milliseconds;
             //if (keyboardState.IsKeyDown(Keys.W) && keyboardState.IsKeyDown(Keys.A))
             //    this.Rotation += 1;
             if (mouseState.LeftButton == ButtonState.Pressed 
@@ -40,12 +47,10 @@ namespace TestGame.Model.Player
                 Gun();
             base.Update();
         }
-
         public override void Draw()
         {
             base.Draw();
         }
-
         public void Gun()
         {
             var bullet = new Bullet(this.SceneManager.UpdateTime.TotalGameTime)

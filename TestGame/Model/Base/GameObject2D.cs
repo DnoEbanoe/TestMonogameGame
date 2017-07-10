@@ -8,7 +8,7 @@ using TestGame.Model.Helpers;
 
 namespace TestGame.Model.Base
 {
-    abstract class GameObject2D
+    internal abstract class GameObject2D
     {
         public SceneManager SceneManager { get; set; }
         public Texture2D Texture { get; set; }
@@ -23,7 +23,7 @@ namespace TestGame.Model.Base
             }
         }
         public float Rotation { get; set; }
-        public bool IsVisable { get; set; } = true;
+        public bool IsVisable { get; private set; } = true;
         public MyPoint Size
         {
             get { return _size; }
@@ -52,15 +52,11 @@ namespace TestGame.Model.Base
         }
         public virtual void Draw()
         {
-            if(!IsVisable)
-                return;
             SceneManager.SpriteBatch.Draw(Texture, Position.ToVector2(), _sourseRectange, Color.White, Rotation, Vector2.One, 1f, SpriteEffects.None, 1f);
         }
 
         public virtual void Update()
         {
-            if(!IsVisable)
-                return;
         }
 
         public virtual bool IsCollide(string tag)
@@ -85,6 +81,11 @@ namespace TestGame.Model.Base
         public void Show()
         {
             SceneManager.Elements.Add(this);
+        }
+
+        public void Hide()
+        {
+            SceneManager.Elements.Remove(this);
         }
         public virtual void Destroy()
         {

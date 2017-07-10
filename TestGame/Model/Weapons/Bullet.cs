@@ -17,10 +17,10 @@ namespace TestGame.Model.Weapons
         public TimeSpan TimeStart { get; set; }
         public override void Update()
         {
-            this.Position.Y -= Spead * this.SceneManager.UpdateTime.ElapsedGameTime.Milliseconds;
+            Position.Y -= Spead * this.SceneManager.UpdateTime.ElapsedGameTime.Milliseconds;
             if (IsCollide("obstacle"))
             {
-                IsVisable = false;
+                Hide();
             }
             base.Update();
         }
@@ -32,10 +32,8 @@ namespace TestGame.Model.Weapons
         }
         public override void Draw()
         {
-            if(!IsVisable)
-                return;
             if (TimeStart < SceneManager.UpdateTime.TotalGameTime.Subtract(TimeSpan.FromMilliseconds(RemoveTime)))
-                IsVisable = false;
+                Hide();
             SceneManager.SpriteBatch.Draw(Texture, Position.ToVector2(), null, Color.White, Rotation, Vector2.Zero, 1f, SpriteEffects.None, 1f);
             
         }

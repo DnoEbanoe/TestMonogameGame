@@ -23,7 +23,7 @@ namespace TestGame
         {
             Player = new Player(){SceneManager = SceneManager, Size = new MyPoint(18,31), Tags = new List<string>(new []{"Player"})};
             Player.Show();
-
+            
 
             base.Initialize();
         }
